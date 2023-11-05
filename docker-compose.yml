@@ -6,7 +6,7 @@ services:
     image: postgres:12
     restart: always
     ports:
-      - "5433:5432"
+      - "5434:5432"
     environment:
       - POSTGRES_USER=postgresapp
       - POSTGRES_PASSWORD=root
@@ -31,11 +31,3 @@ services:
 
 volumes:
   postgres-data:
-
-
-# docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_USER=postgres -e docker-compose rm -fv=app_db -p 5432:5432 -d postgres:12
-# docker create -p 5000:5000 --name flask-container flask:0.0.6
-# docker build -t flask:0.0.6 .
-# docker compose up -d
-
-# docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres -p 5432:5432 -d postgres:12

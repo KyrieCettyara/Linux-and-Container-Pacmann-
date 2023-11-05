@@ -3,7 +3,7 @@ from datetime import timedelta
 # from sqlalchemy import create_engine, text
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-DB_URI = 'postgresql://postgresapp:root@localhost:5433/app'
+DB_URI = 'postgresql://postgresapp:root@localhost:5434/app'
 
 # engine = create_engine(DB_URI)
 
