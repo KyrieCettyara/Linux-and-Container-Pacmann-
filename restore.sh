@@ -1,14 +1,9 @@
 #!/bin/bash
-
+DB_NAME="app"
+DB_USER="postgresapp"
+DB_CONTAINER="postgres"
+BACKUP_FILE="./app_06-11-2023.sql"
 
 # today
-today=$(date +%d-%m-%Y)
 
-# dropdb 
-docker exec -it flask-container bash -c "dropdb -U postgresapp -W restore"
-
-# createdb
-docker exec -it flask-container bash -c "createdb -U postgresapp -W restore"
-
-
-docker exec -it flask-container bash -c "pg_restore -U postgresapp -W -d restore /home/backup-$today.dump"
+docker exec -i $CONTAINER_NAME psql -U postgres -d $DB_NAME < $BACKUP_FILE

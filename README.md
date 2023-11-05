@@ -21,7 +21,7 @@ Langkah ini akan menjalankan beberapa perintah yaitu, menyalin data dari current
 
 Langkah selanjutnya adalah melakukan build untuk flask image.
 
-![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image2.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image3.png)
 
 Pada file docker-compose sudah dibuat detail dari container yang dibutuhkan sehingga untuk tahap selanjutnya dijalankan perintah dibawah untuk membuat container postgresql.
 
@@ -29,7 +29,7 @@ Pada file docker-compose sudah dibuat detail dari container yang dibutuhkan sehi
 compose up -d postgres
 ~~~
 
-![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image3.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image4.png)
 
 Dapat dilihat pada gambar diatas bahwa koneksi berhasil dilakukan.
 
@@ -42,7 +42,7 @@ flask db upgrade
 ~~~
 
 
-![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image4.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image5.png)
 
 Pada gambar diatas dapat dilihat bahwa table sudah terbentuk.
 
@@ -58,19 +58,19 @@ Gunakan perintah dibawah untuk melihat container yang sedang berjalan.
 docker compose up -d flask-app
 ~~~
 
-![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image5.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image6.png)
 
 Seperti pada gambar, pastikan container flask dan postgres berjalan.
 
 Kemudian, menggunakan browser buka aplikasi.
 
-![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image6.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image7.png)
 
 Akan di test data yang baru di masukkan masuk kedalam database.
 
-![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image7.png)
-
 ![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image8.png)
+
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image9.png)
 
 
 
