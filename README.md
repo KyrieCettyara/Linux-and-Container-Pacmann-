@@ -14,14 +14,14 @@
 ## Program Description
 Membuat file yaitu dockerfile yang berisi perintah atau langkah-langkah yang diperlukan  untuk membangu image.
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image1.png)
 
 Langkah ini akan menjalankan beberapa perintah yaitu, menyalin data dari current directory ke app directory container, menginstall semua requirement yang ada pada file requirement.txt, dan terakhir menjalankan script run.py.
 
 
 Langkah selanjutnya adalah melakukan build untuk flask image.
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image2.png)
 
 Pada file docker-compose sudah dibuat detail dari container yang dibutuhkan sehingga untuk tahap selanjutnya dijalankan perintah dibawah untuk membuat container postgresql.
 
@@ -29,7 +29,7 @@ Pada file docker-compose sudah dibuat detail dari container yang dibutuhkan sehi
 compose up -d postgres
 ~~~
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image3.png)
 
 Dapat dilihat pada gambar diatas bahwa koneksi berhasil dilakukan.
 
@@ -42,7 +42,7 @@ flask db upgrade
 ~~~
 
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image4.png)
 
 Pada gambar diatas dapat dilihat bahwa table sudah terbentuk.
 
@@ -58,38 +58,20 @@ Gunakan perintah dibawah untuk melihat container yang sedang berjalan.
 docker compose up -d flask-app
 ~~~
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image5.png)
 
 Seperti pada gambar, pastikan container flask dan postgres berjalan.
 
 Kemudian, menggunakan browser buka aplikasi.
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image6.png)
 
 Akan di test data yang baru di masukkan masuk kedalam database.
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image7.png)
 
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/Function.png)
+![alt text](https://github.com/KyrieCettyara/Linux-and-Container-Pacmann-/blob/main/image/image8.png)
 
-
-
-## Test Case
-Test Case 1
-
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/testCase1.png)
-
-Test Case 2
-
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/testCase2.png)
-
-Test Case 3
-
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/testCase3.png)
-
-Test Case 4
-
-![alt text](https://github.com/KyrieCettyara/Project-Super-Cashier/blob/main/Image/testCase4.png)
 
 
 
