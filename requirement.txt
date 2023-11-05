@@ -2,3 +2,5 @@ Flask == 2.3.2
 Flask-Migrate == 4.0.4
 Flask-SQLAlchemy == 3.0.3
 Flask-JWT-Extended == 4.5.2
+Flask-CORS == 4.0.0
+Psycopg2-binary

@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:12
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_USER=postgresapp
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=app
+    
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  flask-app:
+    container_name: flask-container
+    image: flask:0.0.6
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_URL=postgresql://postgresapp:root@postgres/app
+    depends_on:
+      - postgres
+
+volumes:
+  postgres-data:
+
+
+# docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_USER=postgres -e docker-compose rm -fv=app_db -p 5432:5432 -d postgres:12
+# docker create -p 5000:5000 --name flask-container flask:0.0.6
+# docker build -t flask:0.0.6 .
+# docker compose up -d
+
+# docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_USER=postgres -e POSTGRES_DB=postgres -p 5432:5432 -d postgres:12
