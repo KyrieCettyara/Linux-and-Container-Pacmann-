@@ -2,13 +2,13 @@
 
 
 # today
-today=$(date +YYYYmmdd)
+today=$(date +%d-%m-%Y)
 
 # dropdb 
-docker exec -it flask-container bash -c "dropdb -U postgres -W restore"
+docker exec -it flask-container bash -c "dropdb -U postgresapp -W restore"
 
 # createdb
-docker exec -it flask-container bash -c "createdb -U postgres -W restore"
+docker exec -it flask-container bash -c "createdb -U postgresapp -W restore"
 
 
-docker exec -it fflask-contai#ner bash -c "pg_restore -U postgres -W -d restore /home/backup-$today.dump"
+docker exec -it flask-container bash -c "pg_restore -U postgresapp -W -d restore /home/backup-$today.dump"
